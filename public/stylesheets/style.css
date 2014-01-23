@@ -1,0 +1,455 @@
+body {
+	width:100%;
+	height:100%;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	margin:0px;
+	overflow-x:hidden;
+}
+
+/*a {
+	color: #00B7FF;
+}*/
+
+#main{
+	width:100%;
+	height:500px;
+	margin:0px;
+	position:relative;
+	background:#dddddd;
+}
+
+/*head-banner*/
+#head-banner{
+	width:100%;
+	height:90px;
+	background:#121212;
+	margin:0px;
+	font-size:15px;
+	color:gray;
+	float:left;
+}
+
+	#cross{
+		margin:30px 5px;
+		float:left;
+		font-weight:bold;
+		position:absolute;
+		background:#222222;
+		padding:5px 10px;
+		border-radius:5px;
+		text-decoration:none;
+		color:gray;
+
+		transition:color 0.5s, background 0.5s;
+		-webkit-transition:color 0.5s, background 0.5s;	
+	}
+
+	#cross:hover{
+		color:#eeeeee;
+		background:black;
+	}
+
+
+	#gritcause{
+		display:block;
+		margin:15px auto;
+		font-style:italic;
+		height:70px;width:110px;
+		background:#121212;
+		float:right;
+		position:relative;
+		z-index:1;
+		overflow:hidden;
+
+		transition:width 0.2s;
+		-webkit-transition:width 0.2s;
+	}
+
+	#gritcause-img{
+		float:left;
+		height:75px;width:75px;
+		position:relative;bottom:10px;
+		margin-right:10px;
+		margin-left:30px;
+	}
+
+	#gritcause-def{
+		width:260px;
+		transition:width 0.2s;
+		-webkit-transition:width 0.2s;
+
+	}
+
+	#gritcause:hover{
+		width:280px;
+	}
+
+	#gritcause:hover #gritcause-def{
+		width:260px;
+	}
+
+/*body-front*/
+#body-front-container{
+	position:relative;
+	float:left;
+	width:100%;
+	height: -webkit-calc(100% - 80px);
+
+	perspective:2000px;
+	-webkit-perspective:2000px;
+}
+
+	#body-front{
+		position:absolute;
+		right:0px;
+		float:left;
+		width:100%;
+		height:100%;
+		transform-origin: 100% 100% 0;
+		-webkit-transform-origin: 100% 100% 0;
+
+		transition: transform 0.3s, right 0.3s;
+		-webkit-transition: -webkit-transform 0.3s, right 0.3s;
+
+	}
+
+	#body-front-container:hover #body-front{
+		transform: rotateY(-45deg);
+		-webkit-transform: rotateY(-45deg);
+		right:500px;
+	}
+
+	#main-img-container, #blank, #datetime{
+		position:absolute;
+		height:inherit;
+		width:100%;
+		color:white;
+	}
+
+	#main-img-container{
+		overflow:hidden;
+	}
+
+	#main-img{
+		width:100%;
+		position:relative;
+		bottom:0px;
+	}
+
+
+	#blank{
+		background:#2a2f33;/*#3fbab9*/
+		opacity:0.8;
+	}
+
+	/*datetime*/
+	#datetime{
+		height:370px;
+		border-left:1px solid white;
+		width:700px;
+		margin:20px;
+		position:absolute;bottom:0px;
+	}
+
+	#time{
+		font-size:250px;
+		margin:0px 0px 0px 40px;
+		font-family:"Calibri Light";
+		float:left;
+	}
+
+	#seconds{
+		font-family:"Calibri Light";
+		font-size:50px;float:left;
+		position:relative;top:20px;
+		opacity:0;
+
+		transition: opacity 0.5s;
+		-webkit-transition: opacity 0.5s;
+	}
+
+	#datetime:hover #seconds{
+		opacity:1;
+	}
+
+	#date{
+		font-size:40px;
+		text-align:left;
+		margin:0px 40px;
+		font-family:"Calibri Light";
+		text-align:center;
+	}
+
+	#titlecard{
+		height:100px;
+		width:300px;
+		margin:200px auto;
+	}
+
+	#titlecard h2, #titlecard p, #titlecard hr{
+		text-align:center;
+		color:white;
+		opacity:0.8;
+	}
+
+	{
+		color:#0091ff;
+	}
+
+	#titlecard p{
+		font-size:15px;
+	}
+
+
+/*body-side*/
+#body-side{
+	height:100%;
+	background:#121212;
+	width:500px;
+	position:absolute;
+	right:-500px;
+
+	transition:right 0.3s;
+	-webkit-transition:right 0.3s;
+}
+
+	#body-front-container:hover #body-side{
+		right:0px;
+	}
+
+	#sidecard{
+		height:40px;width:90%;
+		padding:20px;
+	}
+
+	#sidecard p{
+		color:white;
+		text-align:center;
+	}
+
+	/*ryanlink*/
+	#per-link, #pro-link{
+		display:inline-block;
+		z-index:1;
+		border-radius:100px;
+		height:100px;width:400px;
+		margin:20px 50px;
+
+		transition:width 0.2s;
+		-webkit-transition:width 0.2s;
+	}
+
+	#profile-img1, #profile-img2{
+		height:100px;
+		width:100px;
+		border-radius:100px;
+		display:inline-block;float:left;
+		box-shadow:0px 0px 10px black;
+		margin-right:20px;
+	}
+
+	#profile-img1{
+		border:2px #79dc62 solid;
+		background:#79dc62;
+		transition: border 0.2s;
+		-webkit-transition: border 0.2s;
+	}
+
+	#profile-img2{
+		border:2px #cc3535 solid;
+		background:#cc3535;
+		transition: border 0.2s;
+		-webkit-transition: border 0.2s;
+	}
+
+
+	.cta-text{
+		float:left;
+		color:#444444;
+		font-size:20px;
+		width:250px;
+		height:100%;
+		padding-left:10px;
+		margin-top:35px;
+
+		transition: color 0.2s;
+		-webkit-transition: color 0.2s;	
+	}
+
+	#per-link:hover #profile-img1, #pro-link:hover #profile-img2{
+		border:2px white solid;
+	}
+
+
+	#per-link:hover .cta-text{
+		color:white;
+	}
+
+	#pro-link:hover .cta-text{
+		color:white;
+	}
+
+/*Container 2*/
+#personal{
+	height:500px;
+	background:#eeeeee;
+	position:relative;
+}
+
+	#personal-title-card{
+		width:420px;
+		height:100px;
+		margin:50px;
+		position:absolute;
+		right:0px;
+		background:#76dc52;
+		border-radius:20px;
+		border-top-left-radius:100px;
+		border-bottom-left-radius:100px;
+		box-shadow:0px 0px 10px gray;
+		padding-right:20px;
+		border:2px #76dc52 solid;
+	}
+	
+	#profile-img3{
+		height:100px;width:100px;
+		border-radius:100px;
+		float:left;
+		margin-right:20px;
+	}
+
+	#personal-title-card h2{
+		font-size:35px;
+		color:white;
+		font-weight:normal;
+		float:left;
+	}
+
+	#per-cube-container{
+		width:300px;
+		height:300px;
+		position:absolute;
+		margin:300px;
+
+		perspective: 1000px;
+		-webkit-perspective: 1000px;
+	}
+
+
+	#per-cube{
+		width:200px;
+		height:200px;
+		position:relative;
+		margin:50px;
+
+		transform:rotateX(30deg) rotateY(30deg);
+		-webkit-transform:rotateX(30deg) rotateY(30deg);
+
+		transform-style:preserve-3d;
+		-webkit-transform-style:preserve-3d;
+
+		transition: transform 0.3s;
+		-webkit-transition: -webkit-transform 0.3s;
+	}
+
+	#per-cube .face{
+		width:100%;
+		height:100%;
+		position:absolute;
+		opacity:0.5;
+		background:black;
+		border:1px white solid;
+		font-size:100px;
+		color:white;
+		text-align:center;
+		box-shadow:0px 0px 10px black;
+
+		transition:height 0.3s, width 0.3s, margin 0.3s;
+		-webkit-transition:height 0.3s, width 0.3s, margin 0.3s;
+	}
+
+
+	#per-cube .front{
+		transform: rotateY(0deg) translateZ(200px);
+		-webkit-transform: rotateY(0deg) translateZ(200px);
+	}
+	#per-cube .back{
+		transform: rotateX(180deg) translateZ(200px);
+		-webkit-transform: rotateX(180deg) translateZ(200px);
+	}
+	#per-cube .right{
+		transform: rotateY(90deg) translateZ(200px);
+		-webkit-transform: rotateY(90deg) translateZ(200px);
+	}
+	#per-cube .left{
+		transform: rotateY(-90deg) translateZ(200px);
+		-webkit-transform: rotateY(-90deg) translateZ(200px);
+	}
+	#per-cube .top{
+		transform: rotateX(90deg) translateZ(200px);
+		-webkit-transform: rotateX(90deg) translateZ(200px);
+	}
+	#per-cube .bottom{
+		transform: rotateX(-90deg) translateZ(200px);
+		-webkit-transform: rotateX(-90deg) translateZ(200px);
+	}
+
+	/*#per-cube .front:hover{
+		transform:rotateX(30deg) rotateY(30deg);-webkit-transform:rotateX(30deg) rotateY(30deg);
+	}
+	#per-cube .back:hover{
+		transform:rotateX(30deg) rotateY(210deg);-webkit-transform:rotateX(30deg) rotateY(210deg);
+	}
+	#per-cube .right:hover{
+		transform:rotateX(30deg) rotateY(30deg);
+		-webkit-transform:rotateX(30deg) rotateY(30deg);
+	}
+	#per-cube .left:hover{
+		transform:rotateX(30deg) rotateY(30deg);
+		-webkit-transform:rotateX(30deg) rotateY(30deg);
+	}
+	#per-cube .top:hover{
+		transform:rotateX(30deg) rotateY(30deg);
+		-webkit-transform:rotateX(30deg) rotateY(30deg);
+	}
+	#per-cube .bottom:hover{
+		transform:rotateX(30deg) rotateY(30deg);
+		-webkit-transform:rotateX(30deg) rotateY(30deg);
+	}*/
+
+
+/*Container 3*/
+#professional{
+	height:500px;
+	background:#dddddd;
+}
+
+	#professional-title-card{
+		width:500px;
+		height:100px;
+		margin:50px;
+		position:absolute;
+		right:0px;
+		background:#cc3535;
+		border-radius:20px;
+		border-top-left-radius:100px;
+		border-bottom-left-radius:100px;
+		box-shadow:0px 0px 10px gray;
+		padding-right:20px;
+		border:2px #cc3535 solid;
+	}
+	
+	#profile-img4{
+		height:100px;width:100px;
+		border-radius:100px;
+		float:left;
+		margin-right:20px;
+	}
+
+	#professional-title-card h2{
+		font-size:35px;
+		color:white;
+		font-weight:normal;
+		float:left;
+	}
+

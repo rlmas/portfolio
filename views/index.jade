@@ -1,0 +1,55 @@
+extends layout
+
+block content
+	#main
+		#head-banner
+			a#cross(href="http://www.biblegateway.com/passage/?search=Matthew+28%3A19-20&version=NIV" target="_blank") &#10013 Mt 28:19-20
+			#gritcause
+				img#gritcause-img(src="./images/tssmall.gif")
+				#gritcause-def "Stand for what is right, even if you must stand alone."
+		#body-front-container
+			#body-front
+				#main-img-container
+					img#main-img
+				#blank
+				#datapage
+					#titlecard
+						h2 Ryan L. Mascarenhas
+						hr
+						p I love open source, cooperation and volunteerism. I am open-minded, open to discussion and open to helping out.
+						p Did you want to learn more about me?
+					#datetime
+						#time
+						#seconds 00
+						#date
+			#body-side
+				#sidecard
+					p You did? I'm humbled.
+					hr
+
+				a#per-link(href="#personal")
+					img#profile-img1(src='./images/profile.jpg')
+					.cta-text Personal Passions
+				a#pro-link(href="#professional")
+					img#profile-img2(src='./images/profile2.jpg')
+					.cta-text Professional Endeavors
+
+		#foot-banner
+
+	#personal
+		#personal-title-card
+			img#profile-img3(src='./images/profile.jpg')
+			h2 Personal Passions
+		#per-cube-container
+			#per-cube
+					div.face.front 1
+					div.face.back 2
+					div.face.right 3
+					div.face.left 4
+					div.face.top 5
+					div.face.bottom 6
+
+	#professional
+		#professional-title-card
+			img#profile-img4(src='./images/profile2.jpg')
+			h2 Professional Endeavors
