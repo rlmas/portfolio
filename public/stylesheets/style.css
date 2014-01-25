@@ -108,6 +108,8 @@ hr.fronthr{
 	float:left;
 	width:100%;
 	height: -webkit-calc(100% - 90px);
+	height: -moz-calc(100% - 90px);
+
 
 	perspective:2000px;
 	-webkit-perspective:2000px;
@@ -133,7 +135,7 @@ hr.fronthr{
 		right:500px;
 	}
 
-	#main-img-container, #blank, #datetime{
+	#main-img-container, #blank, #datapage{
 		position:absolute;
 		height:inherit;
 		width:100%;
@@ -159,8 +161,8 @@ hr.fronthr{
 
 
 	#blank{
-		background:#2a2f33;/*#3fbab9*/
-		opacity:0.8;
+		background:#0091ff;/*#3fbab9#2a2f33*/
+		opacity:0.2;
 	}
 
 	/*datetime*/
@@ -170,18 +172,18 @@ hr.fronthr{
 		border-left:1px solid white;
 		width:700px;
 		margin:20px;
-		position:absolute;bottom:0px;
+		position:absolute;
+		bottom:0px;
+		font-family:"Calibri";
 	}
 
 	#time{
 		font-size:250px;
 		margin:0px 0px 0px 40px;
-		font-family:"Calibri Light";
 		float:left;
 	}
 
 	#seconds{
-		font-family:"Calibri Light";
 		font-size:50px;float:left;
 		position:relative;top:20px;
 		opacity:0;
@@ -198,12 +200,12 @@ hr.fronthr{
 		font-size:40px;
 		text-align:left;
 		margin:0px 40px;
-		font-family:"Calibri Light";
 		text-align:center;
 	}
 
+	/*titlecard*/
+	/*=====================================================================================================*/
 	#titlecard{
-		height:100px;
 		width:300px;
 		margin:200px auto;
 	}
@@ -593,7 +595,7 @@ hr.fronthr{
 		color:gray;
 		font-size:0px;
 		text-align:left;
-		height:0px;width:0px;
+		height:auto;width:600px;
 		position:relative;
 		bottom:300px;left:330px;
 
@@ -602,7 +604,6 @@ hr.fronthr{
 	}
 
 	.face:hover .face-description{
-		height:auto;width:600px;
 		opacity:1;
 		font-size:20px;
 	}
@@ -926,6 +927,10 @@ hr.fronthr{
 		float:left;
 	}
 
+	#personal{
+		height:1400px;
+	}
+
 	#personal-pro-link, #professional-per-link, .main-link{
 		height:50px;
 	}
@@ -952,13 +957,27 @@ hr.fronthr{
 
 }
 
+@media all and (max-width:1400px){
+	.face-description{
+		width:400px;
+	}
+
+	.face iframe, .face hr{
+		display:none;
+	}
+}
+
 @media all and (max-width:1200px){
+	.face-description{
+		width:260px;
+	}
+
 	#skills-container{
 		width:720px;
 	}
 
 	#professional{
-		height:3600px;
+		height:3700px;
 	}
 
 	.column3{
@@ -966,11 +985,107 @@ hr.fronthr{
 		margin:auto;
 
 	}
+
 }
 
-@media all and (max-width:600px){
+@media all and (max-width:1000px){
+	#per-cube-container-circle{
+		margin-left:auto;
+		margin-right:auto;
+		float:none;
+		position:relative;
+		top:550px;
+	}
+
+	.face-description{
+		top:0px;left:0px;
+	}
+}
+
+@media all and (max-width:700px){
+
+	/*Remove rotating circle*/
+	#personal{
+		height:2500px;
+	}
+
+	#per-cube-container-circle{
+		border-radius:0px;
+		border:0px;
+		box-shadow:0px 0px 0px;
+		width:100%;
+		height:600px;
+		padding:0px;
+		margin:auto;
+		position:relative;
+		float:left;
+		top:0px;
+	}
+
+	#per-cube-container{
+		width:100%;
+		height:100%;
+		position:relative;
+
+		perspective:0px;
+		-webkit-perspective:0px;
+	}
+
+
+	#per-cube{
+		width:300px;
+		height:100%;
+		position:relative;
+		margin:auto;
+		margin-top:50px;
+
+		transform:rotateX(0deg) rotateY(0deg);
+		-webkit-transform:rotateX(0deg) rotateY(0deg);
+
+		transform-style:preserve-3d;
+		-webkit-transform-style:preserve-3d;
+
+		transition: transform 0.3s;
+		-webkit-transition: -webkit-transform 0.3s;
+	}
+
+	#per-cube .face{
+		width:300px;
+		height:300px;
+		float:left;
+		position:relative;
+		box-shadow: 0px 0px 0px;
+		/*bottom:400px;*/
+
+		transition:height 0.3s, width 0.3s, margin 0.3s;
+		-webkit-transition:height 0.3s, width 0.3s, margin 0.3s;
+	}
+
+
+	#per-cube .face img{
+		height:100%;
+		width:100%;
+	}	
+
+	#per-cube .front, #per-cube .back, #per-cube .right, #per-cube .left, #per-cube .top, #per-cube .bottom{
+		transform: rotateY(0deg) translateZ(0px);
+		-webkit-transform: rotateY(0deg) translateZ(0px);
+	}
+
+	.face:hover .face-description{
+		position:absolute;
+		height:260px;
+		width:260px;
+		box-shadow: 0px 0px 0px;
+		opacity:0.8;
+		background:#222222;
+		color:white;
+	}
+
+
+	/*PROFESSIONAL SECTION*/
 	#professional{
-		height:6000px;
+		height:6300px;
 	}
 
 	#professional-title-card h2, #personal-title-card h2{
@@ -981,11 +1096,17 @@ hr.fronthr{
 
 	.section-details{
 		margin-left:10px;
-		width:280px;
+		width:90%;
 	}
 
 	#skills-container{
-		width:400px;
+		width:100%;
+	}
+
+	.column{
+		width:310px;
+		margin:auto;
+		float:none;
 	}
 
 	.pin, .column3 .pin{

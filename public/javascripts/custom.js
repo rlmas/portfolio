@@ -102,46 +102,54 @@ $(window).ready(function(){
 	var cube_vectory = [10, -10, -90, 100, 0, -0];
 
 	//reset cube
-	reset_cube();
+	/*if ($(window).width() > 600){
+
+	}*/
+	//reset_cube();
 
 	$("#per-cube .face").click(function(){
-		if ($(this).css("opacity")=="1"){
-			reset_cube();
-			$("#per-cube").css("transform", "rotateX(30deg) rotateY(30deg)");
-			$("#per-cube").css("-webkit-transform", "rotateX(30deg) rotateY(30deg)");
-		}else{
-			reset_cube();
-			$(this).css("opacity", "1");
-			$(this).css("height", "300px");
-			$(this).css("width", "300px");
-			$(this).css("margin", "0px");
-			$(this).find(".face-description").css("opacity", "1");
-			$(this).find(".face-description").css("height", "auto");
-			$(this).find(".face-description").css("width", "600px");
-			$(this).find(".face-description").css("font-size", "20px");
-			$(this).find(".face-description").css("display", "block");
 
-			var cube_face = $(this).attr("class");
-			if (cube_face == "face front"){
-				cube_face = 0;
-			}else if (cube_face == "face back"){
-				cube_face = 1;
-			}else if (cube_face == "face right"){
-				cube_face = 2;
-			}else if (cube_face == "face left"){
-				cube_face = 3;
-			}else if (cube_face == "face top"){
-				cube_face = 4;
-			}else if (cube_face == "face bottom"){
-				cube_face = 5;
+		if ($("body").width() > 685){
+			if ($(this).css("opacity")!="1" || ($(".front").css("opacity")=="1" && $(".back").css("opacity")=="1")){
+
+				reset_cube();
+				$(this).css("opacity", "1");
+				$(this).css("height", "300px");
+				$(this).css("width", "300px");
+				$(this).css("margin", "0px");
+				$(this).find(".face-description").css("opacity", "1");
+				//$(this).find(".face-description").css("height", "auto");
+				//$(this).find(".face-description").css("width", "600px");
+				$(this).find(".face-description").css("font-size", "20px");
+				$(this).find(".face-description").css("display", "block");
+
+				var cube_face = $(this).attr("class");
+				if (cube_face == "face front"){
+					cube_face = 0;
+				}else if (cube_face == "face back"){
+					cube_face = 1;
+				}else if (cube_face == "face right"){
+					cube_face = 2;
+				}else if (cube_face == "face left"){
+					cube_face = 3;
+				}else if (cube_face == "face top"){
+					cube_face = 4;
+				}else if (cube_face == "face bottom"){
+					cube_face = 5;
+				}
+				x_rotate = cube_vectorx[cube_face];
+				y_rotate = cube_vectory[cube_face];
+
+				setTimeout(function(){
+					$("#per-cube").css("transform", "rotateX("+x_rotate+"deg) rotateY("+y_rotate+"deg)");
+					$("#per-cube").css("-webkit-transform", "rotateX("+x_rotate+"deg) rotateY("+y_rotate+"deg)");
+				}, 200);
+
+			}else{
+				reset_cube();
+				$("#per-cube").css("transform", "rotateX(30deg) rotateY(30deg)");
+				$("#per-cube").css("-webkit-transform", "rotateX(30deg) rotateY(30deg)");
 			}
-			x_rotate = cube_vectorx[cube_face];
-			y_rotate = cube_vectory[cube_face];
-
-			setTimeout(function(){
-				$("#per-cube").css("transform", "rotateX("+x_rotate+"deg) rotateY("+y_rotate+"deg)");
-				$("#per-cube").css("-webkit-transform", "rotateX("+x_rotate+"deg) rotateY("+y_rotate+"deg)");
-			}, 200);
 		}
 
 	});
@@ -213,8 +221,8 @@ function reset_cube(){
 	$("#per-cube .face").css("width", "150px");
 	$("#per-cube .face").css("margin", "75px");
 	$("#per-cube .face .face-description").css("opacity", "0");
-	$("#per-cube .face .face-description").css("height", "0");
-	$("#per-cube .face .face-description").css("width", "0");
+	//$("#per-cube .face .face-description").css("height", "0");
+	//$("#per-cube .face .face-description").css("width", "0");
 	$("#per-cube .face .face-description").css("font-size", "0");
 	$("#per-cube .face .face-description").css("display", "none");
 }
