@@ -11,11 +11,12 @@ block content
 			#body-front
 				#main-img-container
 					img#main-img
+					img#main-img2
 				#blank
 				#datapage
 					#titlecard
 						h2 Ryan L. Mascarenhas
-						hr
+						hr.fronthr
 						p I love open source, cooperation and volunteerism. I am open-minded, open to discussion and open to helping out.
 						p Did you want to learn more about me?
 					#datetime
@@ -26,30 +27,184 @@ block content
 				#sidecard
 					p You did? I'm humbled.
 					hr
+					p rlmascarenhas@gmail.com | (647) 889-8241
+					p <a href="https://www.linkedin.com/in/rlmascarenhas" target="_blank">LinkedIn</a> | <a href="https://www.github.com/rlmas" target="_blank">GitHub</a>
 
-				a#per-link(href="#personal")
-					img#profile-img1(src='./images/profile.jpg')
-					.cta-text Personal Passions
-				a#pro-link(href="#professional")
-					img#profile-img2(src='./images/profile2.jpg')
-					.cta-text Professional Endeavors
+				#sidecard-links
+					a#per-link(href="#personal")
+						img#profile-img1(src='./images/profile.jpg')
+						.cta-text Personal Passions
+					a#pro-link(href="#professional")
+						img#profile-img2(src='./images/profile2.jpg')
+						.cta-text Professional Endeavors
+				
+				#sidecard-bottom
+					p#description Site built using NodeJS, ExpressJS, CSS3, JavaScript and jQuery.
 
 		#foot-banner
 
 	#personal
-		#personal-title-card
-			img#profile-img3(src='./images/profile.jpg')
-			h2 Personal Passions
-		#per-cube-container
-			#per-cube
-					div.face.front 1
-					div.face.back 2
-					div.face.right 3
-					div.face.left 4
-					div.face.top 5
-					div.face.bottom 6
+		#personal-title-card-container.section-title-card-container
+			#personal-title-card.section-title-card
+				img#profile-img3(src='./images/profile.jpg')
+				h2 Personal Passions
+			#personal-details.section-details
+				p &#8592 Here are 6 of my favorite personal activities! Why only 6? Because cubes only have 6 faces and these activities had color.
+				p But, in addition to those, I'm also interested in farming, sustainable living, teaching, web development, manga, art, movies and exploration.
+				hr
+				a#personal-pro-link(href="#professional")
+					img#profile-img5(src='./images/profile2.jpg')
+					h2 Professional Endeavors
+				a.main-link(href="#main")
+					.profile-img-main &#8593
+					h2 To the top
+		#per-cube-container-circle
+			#per-cube-container
+				#per-cube
+						div.face.front
+							img(src="./images/cube/world.jpg")
+							div.face-title World
+							div.face-description "I love exploring different cultures (especially Japan's) and keeping a touch on the world's pulse."
+						div.face.back
+							img(src="./images/cube/gamer.jpg")
+							div.face-title Gamer
+							div.face-description "Games are an amazing experience in immersive technology. It's a movie you can control and the stories can be phenomenal. This trailer (18+) proves it!"
+								hr
+								iframe(width="560" height="315" src="//www.youtube.com/embed/NL4ZxDWLwpM?rel=0" frameborder="0")
+						div.face.right
+							img(src="./images/cube/aircraft.jpg")
+							div.face-title Aircraft
+							div.face-description "Planes are an amazing feat of engineering. Further, it was the reason I entered the field of technology and engineering. Though my interests have shifted to coding, Cold War aircraft and current day aerospace technology still inspire me. I admit, air combat isn't like in the trailer below...but still!"
+								hr
+								iframe(width="560" height="315" src="//www.youtube.com/embed/XFg3a4YhGUs?rel=0" frameborder="0")
+
+						div.face.left
+							img(src="./images/cube/nature2.jpg")
+							div.face-title Nature
+							div.face-description "I absolutely love nature. That distant quietness is something so far removed from our busy lives. Where there is a hiking trail or a chance to go camping, I'm the first to volunteer."
+						div.face.top
+							img(src="./images/cube/astronomer2.jpg")
+							div.face-title Astronomer
+							div.face-description "I love space and space exploration. Remembering the facts on how large our universe is can be a truly humbling experience. In reality, our whole human history has occured 'on a mote of dust suspended in a sunbeam' - Carl Sagan."
+						div.face.bottom
+							img(src="./images/cube/climber.jpg")
+							div.face-title Climbing
+							div.face-description "Amateur rock climbing and bouldering is my new found passion. Though you may be alone in that climb for that minute or so, it really is a frightening encounter with your personal limits."
 
 	#professional
-		#professional-title-card
-			img#profile-img4(src='./images/profile2.jpg')
-			h2 Professional Endeavors
+		#professional-title-card-container.section-title-card-container
+			#professional-title-card.section-title-card
+				img#profile-img4(src='./images/profile2.jpg')
+				h2 Professional Endeavors
+			#professional-details.section-details
+				p My employers have found me to be an asset to their organization. The panels in white show you everything I've done so far.
+
+				p In every team I've joined, I've been able to add value primarily because of 6 major traits:
+				ul 
+					li <span>I learn very quickly</span>: Just drop the documentation in front of me and I'll figure it out from there.
+					li <span>I'm a self-starter</span>: If there is no documentation, I'll find out everything before you ask me to. 
+					li <span>I'm responsible</span>: Things need to be done? They'll be done. Mistakes on my side occured? I won't hide anything.
+					li <span>I'm technical</span>: Advances in technology get me excited and I can keep on top of science and tech talk.
+					li <span>I can relate</span>: I am empathize, sympathize and walk a mile in your shoes. This means, no matter what the subject matter, when I understand it, I can relay it to virtually any audience.
+				hr
+				a#professional-per-link(href="#personal")
+					img#profile-img6(src='./images/profile.jpg')
+					h2 Personal Passions
+				a.main-link(href="#main")
+					.profile-img-main &#8593
+					h2 To the top
+
+		#skills-container
+			.column.column1
+				.pin.title-pin
+					h1 Web Dev
+				#webdeveloper-pin.pin
+					h3 Languages & Systems I work with
+					div.languages-div
+					ul
+						li ExpressJS NodeJS Framework
+						li Ajax
+
+					p One lesson I learned from programming was this: "Never give up." No matter how difficult the problem may seem, it is never impossible.
+					p By breaking the problem down into smaller steps, you can fundamentally understand the issue (1st half of the battle) and then creatively solve each step (2nd half of the battle). This has always worked for me, whether it was creating a game engine, timelines, parallax views, a 3D cube, etc.
+
+				#dynastyexportsolutions-pin.pin
+					h3 Dynasty Export Solutions
+					a(href="http://www.dynastyexportsolutions.com" target="_blank")
+						div.dxs Dynasty Export Solutions
+					p I built this for a friend using WordPress, custom child themes and javascript. It's browser and multi-resolution friendly.
+				#gritcause-pin.pin
+					h3 GritCause
+					p I started this company as a side project to house my creative ideas. Here's the <a href="http://www.gritcause.com" target="_blank">main site<a>.
+					a(href="https://www.gritcause.com" target="_blank")
+						div.home
+					a(href="https://www.gc-interchange.com" target="_blank")
+						div.interchange
+					p <a href="https://www.gc-interchange.com" target="_blank">The InterChange<a> is a media-rich investigation web app that allows you collocate records, such as text, images, video and audio, into a single library to contextualize information. Further, you can map these records onto a timeline to see how events stack up chronologically. If you want to gain a deeper insight into your evidence, this is the site for you.
+
+			.column.column2
+				.pin.title-pin.title-pin
+					h1 Apps
+				#spook-pin.pin
+					h3 Spook
+					a(href="https://www.github.com/rlmas/spook.git" target="_blank")
+						img.spook(src="./images/spook3.jpg")
+					p Spook is a game about an eyeball with 2 feet. He's sensitive to terrain, obey's projectile kinematics and has its own animations. You can fork the working demo on <a href="https://www.github.com/rlmas/spook.git">github<a>.
+				#coast-pin.pin
+					h3 Coast
+						span NEW!
+					p An app project to discover the world (it's still in its early days). Did you ever think there were cool places in your community that not enough people knew about? Or are you looking for a place to stop and smell the roses while sightseeing or trail blazing? If so, Coast is for you.
+					img(src="./images/coast.jpg")
+				#timer-pin.pin
+					h3 Timer
+					div#timer
+						<span>00</span>:<span>00</span>:<span>00</span>.<span>0<span>
+
+					p Simple jQuery timer that keeps you focused on the numbers that matter. Click to see what I mean. Fork it on <a href="https://www.github.com/rlmas/timer.git">github<a>.
+
+
+			.column.column3
+				.pin.title-pin
+					h1 Work Experience
+				#gritcause-work-pin.pin
+					h3 GritCause Inc., Mississauga, ON
+					h4 Front and Back End Web Developer, Database Administrator
+					p [August 2012 – Ongoing]
+					ul
+						li Created the www.gc-interchange.com, a database-driven, media-rich web application
+						li Built a responsive and user-friendly UI utilizing advanced HTML5, CSS3, jQuery and AJAX
+						li Implemented complicated functions such as timelines using PHP, AJAX and MySQL
+						li Optimized functionality using debugging methods and resources such as StackOverflow
+						li Developed an entrepreneurial mindset and strategy to guide future organizational initiatives 				
+				#keyence-pin.pin
+					h3 Keyence Canada Inc., Mississauga, ON
+					h4 Applications Product Support Specialist · Technical Services Department 
+					p [May 2012 – March 2013]
+					ul
+						li Improved customer retention rates by solving difficult manufacturing problems
+						li Increased sales by 150% for an already profitable technology through specialized sales training
+						li Increased branch competitive standing by working in a team to exceed all goals on time
+						li Increased company efficiency by working with other departments to improve internal processes				
+					h4 Automation Sales Executive · Sales Department 
+					p [September 2011 – May 2012]
+					ul
+						li Established a larger territorial market share by meeting new clients and gaining referrals
+						li Achieved new business opportunities by establishing the company's reputation at client sites
+						li Improved company's reputation by resolving challenging manufacturing hurdles
+						li Generated over a quarter-million dollar in sales revenue through networking and strategy					
+				#mcmaster-pin.pin
+					h3 McMaster University, Hamilton, ON
+					h4 Bachelor of Engineering and Management with Co-op · Faculty of Engineering Physics
+					p [Sept 2004 – June 2011]
+					ul 
+						li Studied photonics, nanotechnology and nuclear engineering principles and methods
+						li Gained skills in problem solving methods, organization, and time management
+						li Increased communication-presentation competency and teamwork skills
+						li Accomplished deeper level understanding of programming, computer systems and MS Office
+						li Successfully completed numerous engineering and business management projects
+				#Certificates-pin.pin
+					h3 Certifications
+					ul
+						li CPR-C and Level 1 First Aid (Certified Feb 24th, 2013)
+						li G-class Driver's License
+
