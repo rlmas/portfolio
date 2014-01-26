@@ -58,38 +58,48 @@ block content
 				a.main-link(href="#main")
 					.profile-img-main &#8593
 					h2 To the top
-		#per-cube-container-circle
-			#per-cube-container
-				#per-cube
-						div.face.front
-							img(src="./images/cube/world.jpg")
-							div.face-title World
-							div.face-description "I love exploring different cultures (especially Japan's) and keeping a touch on the world's pulse."
-						div.face.back
-							img(src="./images/cube/gamer.jpg")
-							div.face-title Gamer
-							div.face-description "Games are an amazing experience in immersive technology. It's a movie you can control and the stories can be phenomenal. <a href="http://www.youtube.com/watch?v=NL4ZxDWLwpM">This trailer</a> (18+) proves it!"
-								hr
-								iframe(width="560" height="315" src="//www.youtube.com/embed/NL4ZxDWLwpM?rel=0" frameborder="0")
-						div.face.right
-							img(src="./images/cube/aircraft.jpg")
-							div.face-title Aircraft
-							div.face-description "Planes are an amazing feat of engineering. Further, it was the reason I entered the field of technology and engineering. Though my interests have shifted to coding, Cold War aircraft and current day aerospace technology still inspire me. I admit, air combat isn't like in this <a href="http://www.youtube.com/watch?v=XFg3a4YhGUs">trailer</a>...but still!"
-								hr
-								iframe(width="560" height="315" src="//www.youtube.com/embed/XFg3a4YhGUs?rel=0" frameborder="0")
+		#per-cube-controller
+			h2 Select a Face <noscript><span>(using the radio buttons)</span></noscript>
+			p Thanks CSS Tricks!
+			input#radio-front(type="radio" name="face-selected")
+			input#radio-back(type="radio" name="face-selected")
+			input#radio-right(type="radio" name="face-selected")
+			input#radio-left(type="radio" name="face-selected")
+			input#radio-top(type="radio" name="face-selected")
+			input#radio-bottom(type="radio" name="face-selected")			
 
-						div.face.left
-							img(src="./images/cube/nature2.jpg")
-							div.face-title Nature
-							div.face-description "I absolutely love nature. That distant quietness is something so far removed from our busy lives. Where there is a hiking trail or a chance to go camping, I'm the first to volunteer."
-						div.face.top
-							img(src="./images/cube/astronomer2.jpg")
-							div.face-title Astronomer
-							div.face-description "I love space and space exploration. Remembering the facts on how large our universe is can be a truly humbling experience. In reality, our whole human history has occured 'on a mote of dust suspended in a sunbeam' - Carl Sagan."
-						div.face.bottom
-							img(src="./images/cube/climber.jpg")
-							div.face-title Climbing
-							div.face-description "Amateur rock climbing and bouldering is my new found passion. Though you may be alone in that climb for that minute or so, it really is a frightening encounter with your personal limits."
+			#per-cube-container-circle
+				#per-cube-container
+					#per-cube.per-cube
+							div.face.front
+								img(src="./images/cube/world.jpg")
+								div.face-title World
+								div.face-description "I love exploring different cultures (especially Japan's) and keeping a touch on the world's pulse."
+							div.face.back
+								img(src="./images/cube/gamer.jpg")
+								div.face-title Gamer
+								div.face-description "Games are an amazing experience in immersive technology. It's a movie you can control and the stories can be phenomenal. <a href="http://www.youtube.com/watch?v=NL4ZxDWLwpM">This trailer</a> (18+) proves it!"
+									hr
+									iframe(width="560" height="315" src="//www.youtube.com/embed/NL4ZxDWLwpM?rel=0" frameborder="0")
+							div.face.right
+								img(src="./images/cube/aircraft.jpg")
+								div.face-title Aircraft
+								div.face-description "Planes are an amazing feat of engineering. Further, it was the reason I entered the field of technology and engineering. Though my interests have shifted to coding, Cold War aircraft and current day aerospace technology still inspire me. I admit, air combat isn't like in this <a href="http://www.youtube.com/watch?v=XFg3a4YhGUs">trailer</a>...but still!"
+									hr
+									iframe(width="560" height="315" src="//www.youtube.com/embed/XFg3a4YhGUs?rel=0" frameborder="0")
+
+							div.face.left
+								img(src="./images/cube/nature2.jpg")
+								div.face-title Nature
+								div.face-description "I absolutely love nature. That distant quietness is something so far removed from our busy lives. Where there is a hiking trail or a chance to go camping, I'm the first to volunteer."
+							div.face.top
+								img(src="./images/cube/astronomer2.jpg")
+								div.face-title Astronomer
+								div.face-description "I love space and space exploration. Remembering the facts on how large our universe is can be a truly humbling experience. In reality, our whole human history has occured 'on a mote of dust suspended in a sunbeam' - Carl Sagan."
+							div.face.bottom
+								img(src="./images/cube/climber.jpg")
+								div.face-title Climbing
+								div.face-description "Amateur rock climbing and bouldering is my new found passion. Though you may be alone in that climb for that minute or so, it really is a frightening encounter with your personal limits."
 
 	#professional
 		#professional-title-card-container.section-title-card-container

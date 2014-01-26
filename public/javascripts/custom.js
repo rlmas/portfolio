@@ -1,20 +1,5 @@
 $(window).ready(function(){
 	
-
-	//set landing page size
-	/*var window_height = $(window).height();
-	if (window_height < 500){
-		window_height = 500;
-	}
-	$("#main").css("height", window_height+"px");
-
-	$(window).resize(function(){
-		$("#main").css("height", window_height+"px");
-	});*/
-	//$("#personal").css("height", window_height+"px");
-	//$("#professional").css("height", window_height+"px");
-
-
 	//datetime
 	var datetime = new Date();
 	var day_array = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -99,13 +84,15 @@ $(window).ready(function(){
 
 	//rotate cube
 	var cube_vectorx = [20, 180, 10, 10, -70, 100];
-	var cube_vectory = [10, -10, -90, 100, 0, -0];
+	var cube_vectory = [10, -10, -90, 100, 0, 0];
 
-	//reset cube
-	/*if ($(window).width() > 600){
-
-	}*/
-	//reset_cube();
+	//reset cube + get rid of radio buttons with JS
+	$("#radio-front").css("display", "none");
+	$("#radio-back").css("display", "none");
+	$("#radio-right").css("display", "none");
+	$("#radio-left").css("display", "none");
+	$("#radio-top").css("display", "none");
+	$("#radio-bottom").css("display", "none");
 
 	$("#per-cube .face").click(function(){
 
